@@ -1,0 +1,130 @@
+<html>
+<head>
+	<title>CSS Examples</title>
+	<style type="text/css">
+
+	#footer p{
+		background: url('chbk.jpeg') fixed;
+	}
+
+	#header{
+		color: #009900;
+	}
+
+	#header a{
+		color: #444444;
+		text-decoration: none;
+		padding: 10px;
+		transition: color 0.5s;
+		-webkit-transition: color 0.5s;
+	}
+
+	#header a[href^='http']{
+		color: #777799;
+	}
+
+	#header a:hover{
+		text-decoration: underline;
+		color: #990000;
+	}
+
+	#content p{
+		color: #990000;
+		background-color: #009900;
+		background-color: rgba(0, 153, 0, 0.2);
+		transition: font-size 0.5s;
+		-webkit-transition: font-size 0.5s;
+	}
+
+	.slanty{
+		font-style: italic;
+	}
+
+	.big{
+		font-weight: bold;
+		color: #222222;
+		font-size: 2em;
+	}
+
+	.nice-header{
+		font-family: arial, sans-serif;
+		color: #990000;
+		background-color: #000000;
+		text-decoration: underline;
+	}
+
+
+
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#content p").click(function(){
+				$(this).toggleClass("slanty");
+				$(this).toggleClass("big");
+			});
+
+			$("#footer p").click(function(){
+				$(this).hide(500);
+			});
+
+			$("#footer h1").click(function(){
+				$("#footer p").show(3000);
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div id="header">
+		<a href="page.html">Other Page</a>
+		<a href="http://www.google.com" target="_blank">Google</a>
+		<a href="http://www.jquery.com" target="_blank">jQuery</a>
+	</div>
+
+	<div id="content">
+		<h1 class="slanty big">Lorem Ipsum Dolor</h1>
+		<p class="slanty">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class="big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class="slanty">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+	<div id="footer">
+		<h1 class="nice-header">Lorem Ipsum Dolor</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+</body>
+</html>
