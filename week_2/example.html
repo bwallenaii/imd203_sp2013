@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>JS Example</title>
+	<script type="text/javascript">
+		var x = Number("asdf");
+		var y = Number("asdf");
+		var animal;
+		var cheese;
+
+		cheese = confirm("Do you like cheese?");
+
+		while(isNaN(x))
+		{
+			x = Number(prompt("Give me a number for x"));
+		}
+		while(isNaN(y))
+		{
+			y = Number(prompt("Give me a number for y"));
+		}
+		animal = prompt("What is your favorite animal?");
+
+		cheese ? alert("I like cheese too."):alert("... but everyone likes cheese.");
+
+		if(x < y)
+		{
+			alert(x + " is smaller than " + y);
+		}
+		else if(x > y)
+		{
+			alert(x + " is larger than " + y);
+		}
+		else
+		{
+			alert(x + " and " + y + " are the same!!");
+		}
+
+		switch(animal.toLowerCase())
+		{
+			case "monkey":
+				alert("ooh ooh aah aah");
+			break;
+			case "lion":
+				alert("roar");
+			break;
+			case "dog":
+				alert("aoooooh!");
+			break;
+			case "platypus":
+				alert("grgrgrgrgrgr");
+			break;
+			default:
+				alert("I don't know what a " + animal + " is.");
+			break;
+		}
+
+		alert("This will always show");
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
