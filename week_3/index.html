@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Loops, Arrays, Objects</title>
+	<script>
+		var numHi = 0;//"asdf";
+		/*var store = {
+			name:"Smith's",
+			size:"large",
+			maxOccupancy:103
+		};*/
+
+		var stores = [];
+
+		while(isNaN(numHi))
+		{
+			numHi = prompt("How many hi's do you want?")
+		}
+
+		while(confirm("Would you like to add a store?"))
+		{
+			var store = {};
+			store.name = prompt("What is the name of the store?");
+			store.size = prompt("How big is the store? (i.e. small, medium, large)");
+			store.maxOccupancy = prompt("How many people can fit in the store?");
+			store.hasParking = confirm("Is parking available?");
+
+			stores.push(store);
+		}
+		
+		console.log(store);
+
+	</script>
+</head>
+<body>
+
+<script>
+	for(var i=0; i < numHi;i++)
+	{
+		document.write("hi ");
+	}
+</script>
+
+
+	<script>
+	for(var i = 0; i < stores.length;++i)
+	{
+		store = stores[i];
+		document.write("<p>" + store.name + " is a " + store.size + " store with a maximum occupancy of " + store.maxOccupancy + ".");
+		if(store.hasParking)
+		{
+			document.write(" Parking is available.");
+		}
+		document.write("</p>");
+	}
+	</script>
+</p>
+
+</body>
+</html>
