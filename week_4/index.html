@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Function Test</title>
+	<script type="text/javascript">
+		// a raw function
+
+		function throwBox(text, type)
+		{
+			alert(text);
+			
+			if(!type)
+			{
+				return false;
+			}
+
+			console.log("we have a type: ", type);
+			
+			return type;
+		}
+
+		function clickBtn()
+		{
+			throwBox(document.getElementById("saying").value);
+		}
+
+
+		//var box1 = throwBox("Hello!");
+		//var box2 = throwBox("Goodbye", "silly");
+		//console.log(box1, box2);
+
+		//functions in objects (extra for later)
+
+		/*var cat = {
+
+			furColor: "black",
+			noise: "meow",
+			eyeColor: "red",
+			speak: function(){
+				alert(this.noise);
+			},
+			eat: function(){
+				alert("crunch, crunch");
+				this.speak();
+			}
+		};
+
+		cat.speak();
+		cat.eat();
+		cat.speak();*/
+	</script>
+</head>
+<body>
+
+<input type="text" id="saying" placeholder="Type here" />
+<button onClick="throwBox(document.getElementById('saying').value)">Click me!</button>
+
+
+
+</body>
+</html>
