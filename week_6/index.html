@@ -1,0 +1,193 @@
+<html>
+<head>
+	<title>Forms</title>
+	<style type="text/css">
+		label{
+			display: block;
+			margin-bottom: 7px;
+		}
+		label span{
+			width: 100px;
+			display: inline-block;
+		}
+		.choices{
+			display: block;
+			margin-bottom: 7px;
+		}
+		.choices label{
+			display: inline;
+			margin-right: 10px;
+		}
+		.choices span{
+			width: 100px;
+			display: inline-block;
+		}
+
+		label.error{
+			color: red;
+			display: inline-block;
+			margin-left: 15px;
+		}
+
+		input.error{
+			border: thin red solid;
+		}
+		input[type='radio']+label.error{
+			position: absolute;
+			left: 375px;
+		}
+	</style>
+	<script src="js/jquery-1.9.0.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<h3>Your Dating Profile</h3>
+	<form id="profile" action="process.php" enctype="multipart/form-data" method="post">
+		<input type="hidden" name="dt" value="e49" />
+		<label>
+			<span>First Name: </span>
+			<input type="text" name="first_name" class="required" />
+		</label>
+		<label>
+			<span>Last Name: </span>
+			<input type="text" name="last_name" class="required" />
+		</label>
+		<label>
+			<span>Screen Name: </span>
+			<input type="text" name="screen_name" class="required" minlength="4" maxlength="25" />
+		</label>
+		<label>
+			<span>E-mail: </span>
+			<input type="text" name="email" class="required email" />
+		</label>
+		<label>
+			<span>Password: </span>
+			<input type="password" name="password" />
+		</label>
+		<label>
+			<span>Verify: </span>
+			<input type="password" name="verify" />
+		</label>
+		<label>
+			<span>State:</span>
+			<select name="state" class="required">
+				<option value="">Select State</option>
+				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="HI">Hawaii</option>
+				<option value="ID">Idaho</option>
+				<option value="IL">Illinois</option>
+				<option value="IN">Indiana</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NV">Nevada</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NM">New Mexico</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="ND">North Dakota</option>
+				<option value="OH">Ohio</option>
+				<option value="OK">Oklahoma</option>
+				<option value="OR">Oregon</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="SD">South Dakota</option>
+				<option value="TN">Tennessee</option>
+				<option value="TX">Texas</option>
+				<option value="UT">Utah</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WA">Washington</option>
+				<option value="WV">West Virginia</option>
+				<option value="WI">Wisconsin</option>
+				<option value="WY">Wyoming</option>
+			</select>
+		</label>
+		<div class="choices">
+			<span>Gender:</span>
+			<label>
+				<input type="radio" name="gender" value="male" class="required" />
+				Male
+			</label>
+			<label>
+				<input type="radio" name="gender" value="female" />
+				Female
+			</label>
+			<label>
+				<input type="radio" name="gender" value="undisclosed" />
+				Undisclosed
+			</label>
+		</div>
+		<div class="choices">
+			<span>Seeking:</span>
+			<label>
+				<input type="radio" name="seeking" value="male" class="required" />
+				Male
+			</label>
+			<label>
+				<input type="radio" name="seeking" value="female" />
+				Female
+			</label>
+			<label>
+				<input type="radio" name="seeking" value="either" />
+				Either
+			</label>
+		</div>
+		<div class="choices">
+			<h4>Stuff I like:</h4>
+				<label>
+					<input type="checkbox" name="likes[]" value="Ponies" />
+					Ponies
+				</label>
+				<label>
+					<input type="checkbox" name="likes[]" value="Unicorns" />
+					Unicorns
+				</label>
+				<label>
+					<input type="checkbox" name="likes[]" value="Beach Walks" />
+					Long walks on the beach
+				</label>
+				<label>
+					<input type="checkbox" name="likes[]" value="Pina Colatas" />
+					Pi&ntilde;a Colatas
+				</label>
+				<label>
+					<input type="checkbox" name="likes[]" value="Rain Caught" />
+					Getting caught in the rain
+				</label>
+		</div>
+		<label>
+			<span>Upload Photo:</span>
+			<input type="file" name="photo" />
+		</label>
+		<label>
+			<p>Bio:</p>
+			<textarea name="bio"></textarea> 
+		</label>
+		<input type="reset" />
+		<input type="submit" />
+	</form>
+</body>
+</html>
