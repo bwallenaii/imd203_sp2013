@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Responsive Example</title>
+	<link rel="stylesheet" href="css/screen.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var wind = $(window);
+			var navlist = $("#nav-list");
+
+			$("#tap-area").click(function(){
+				navlist.toggle(500);
+			});
+
+			wind.resize(function(){
+				if(wind.width() <= 650)
+				{
+					navlist.hide();
+				}
+				else
+				{
+					navlist.show();
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav>
+		<div id="tap-area">Tap Area</div>
+		<div id="nav-list">
+			<a href="#">Home</a>
+			<a href="#">Page 2</a>
+			<a href="#">Page 3</a>
+			<a href="#">Page 4</a>
+			<a href="#">Page 5</a>
+			<a href="#">Page 6</a>
+			<a href="#">Page 2</a>
+			<a href="#">Page 3</a>
+			<a href="#">Page 4</a>
+			<a href="#">Page 5</a>
+			<a href="#">Page 6</a>
+		</div>
+	</nav>
+	<section id="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</section>
+
+</body>
+</html>
